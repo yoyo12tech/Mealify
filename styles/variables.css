@@ -1,0 +1,49 @@
+:root{
+    --header-background-color:hsl( 0, 0%, 100% );
+    --primary-background-color:#EEEEEE ;
+    --secondary-background-color:#FFFFFF;
+    --color-primary: hsl( 0, 84%, 44% );
+    --color-primary-h: hsl(0, 84%, 52%);
+    --color-default: #212529;
+    --color-secondary: #37373f;
+    --color-tertiary: #7f7f90;
+    --color-fourth: #4f4f5a;
+    --svg-curly:url("../assets/svg/team-shape.svg");
+    --bg-details:#EEEEEE;
+    --h3-details:#7d7d7d;
+    --border-color-details:#E8E3E3;
+
+}
+body:has(.cb:checked){
+    --header-background-color:#171717;
+    --primary-background-color:#252525;
+    --secondary-background-color:#202020 ;
+    --color-primary: hsl( 35, 72%, 44% );
+    --color-primary-h: hsl( 35, 72%, 52% );
+    --color-default: #FFFFFF;
+    --color-secondary: #fff;
+    --color-tertiary: #9f9f9f;
+    --color-fourth: #9f9f9f;
+    --svg-curly:url("../assets/svg/team-shape-dark.svg");
+    --bg-details:#0D0D0D;
+    --h3-details:#adadad;
+    --border-color-details:#000000;
+
+
+}
+
+*{
+    font-family: "Open Sans", sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: var(--color-default);
+}
+::selection{
+    background-color: var(--color-primary);
+    color: var(--header-background-color);
+}
+a{
+    text-decoration: none;
+    color: var(--color-default);
+}

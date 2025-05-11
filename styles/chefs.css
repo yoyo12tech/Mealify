@@ -1,0 +1,304 @@
+.chefs-section-wrapper{
+    background-color: var(--secondary-background-color);
+    overflow: hidden;
+}
+.chefs-section{
+    width: 77%;margin: auto;padding: 4% 0;
+}
+.sect-heading{
+    text-align: center;
+    color: var(--color-tertiary);
+    font-weight: 400;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+}
+.sub-head{
+    text-align: center;
+    font-size: 3.125rem;
+    font-weight: 500;
+    color: var(--color-secondary);
+    font-family: "Amatic SC", sans-serif;
+    margin-bottom: 2.5rem;
+}
+.sec-sub-letter{
+    font-size: 3.125rem;
+    font-weight: 500;
+    color: var(--color-secondary);
+    font-family: "Amatic SC", sans-serif;
+}
+.sub-head>.special,.sub-head>.special>.sec-sub-letter{
+    font-size: 3.125rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    font-family: "Amatic SC", sans-serif;
+}
+.chefs-section>.chef-cards{
+    display: flex;align-content: center;justify-content: space-between;flex-wrap: wrap;/*wrap :Items wrap onto multiple lines from top to bottom. defalut is nowrap which makes all saty in one line forced*/
+}
+.chefs-section>.chef-cards>.card{
+    width: 32%;border-radius: 1rem;
+    background-color: var(--header-background-color);
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;transition: 0.3s ease-in-out;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    transform-style: preserve-3d;
+
+}
+.chefs-section>.chef-cards>.card:hover{
+    transform: scale(1.06);
+    will-change: transform;
+
+}
+
+.chefs-section>.chef-cards>.card>picture{
+    position: relative;
+    display: block; /*As picture is inline element by default wich messes stacking context as browser doesnt understnand as parent . so when jusing positiong use usually block. Not inline */
+}
+.chefs-section>.chef-cards>.card>picture>img{
+    width: 100%;border-top-left-radius: 1rem;border-top-right-radius: 1rem;position: relative;
+}
+.chefs-section>.chef-cards>.card>picture>.curly-bg{
+    background-image: var(--svg-curly);
+    background-position: center bottom;
+    background-color: transparent;
+    position: absolute;
+    background-repeat: no-repeat;
+    transform: scaleX(2.4);
+    bottom: 0px;left: 0px;
+    width: 100%;
+    border: none;
+    height: 4rem;
+
+}
+.chefs-section>.chef-cards>.card>picture>.logos-container{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.358);
+    top:1.5rem;right: 0.7rem;
+    width: 3rem;height: 11rem;
+    display: flex; flex-direction: column;   align-items: center;justify-content: space-evenly;
+    border-radius: 8px;
+    transform: translateX(150%);
+    transition: 0.3s ease-in-out;
+    transition-delay: 0.3s;
+
+}
+.chefs-section>.chef-cards>.card>picture>.logos-container>i{
+    color: rgba(52, 52, 52, 0.502);
+    font-size: 1.1rem;
+    transition: 0.3s ease-in-out;
+}
+.chefs-section>.chef-cards>.card>picture>.logos-container>i:hover{
+    color:rgba(16, 16, 16, 0.678);
+
+}
+.chefs-section>.chef-cards>.card:hover picture>.logos-container{
+    transform: translate(0%);
+}
+
+
+.chefs-section>.chef-cards>.card>.card-content{
+    background-color: var(--header-background-color);
+    text-align: center;
+    padding: 1rem 1.5rem;
+    padding-top: 0.1rem;
+}
+
+.chefs-section>.chef-cards>.card>.card-content>h3{
+    color:var(--color-default);
+    font-size:"Inter", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    margin-bottom: 0.1rem;
+}
+.chefs-section>.chef-cards>.card>.card-content>span{
+    font-size: 0.8rem;
+    color: var(--color-tertiary);display: inline-block;
+    margin-block: 0.3125rem 0.625rem;
+
+}
+.chefs-section>.chef-cards>.card>.card-content>p{
+    font-size: 0.81rem;
+    font-style: italic;
+    line-height: 1.1rem;
+    color: var(--color-tertiary);
+}
+
+
+
+/*✅ Bootstrap Breakpoints Reference:
+Breakpoint	Width Range
+xl	≥ 1200px
+lg	≥ 992px and <1200px
+md	≥ 768px and <992px
+sm	≥ 576px and <768px
+xs	< 576p
+*/
+/* LG: Between 992px and 1199.98px (Bootstrap's large screens) */
+
+
+
+
+/* Large (LG): ≥992px and <1200px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    html{
+        font-size: 15px;
+    }
+    .sect-heading{
+        font-size: 0.98rem;
+    }
+    .sub-head{
+        font-size: 3.425rem;
+    }
+    .sub-head>.sec-sub-letter{
+        font-size: 3.425rem;
+    }
+    .sub-head>.special,.sub-head>.special>.sec-sub-letter{
+        font-size: 3.425rem;
+        
+    }
+
+    
+}
+
+/*Medium (MD): ≥768px and <992px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    html{
+        font-size: 14px;
+    }
+    .sect-heading{
+        font-size: 1.0rem;
+    }
+    .sub-head{
+        font-size: 3.8rem;
+    }
+    .sub-head>.sec-sub-letter{
+        font-size: 3.8rem;
+    }
+    .sub-head>.special,.sub-head>.special>.sec-sub-letter{
+        font-size: 3.8rem;
+        
+    }
+    .chefs-section{
+        width: 80%;
+    }
+    .chefs-section>.chef-cards{
+        justify-content: space-evenly;
+    }
+    .chefs-section>.chef-cards>.card{
+        width: 40%;
+        margin-bottom: 2.5rem;
+    }
+}
+  
+/*Small (SM): ≥576px and <768px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    html{
+        font-size: 13px;
+    }
+    .sect-heading{
+        font-size: 1.05rem;
+        margin-top: 3rem;
+    }
+    .sub-head{
+        font-size: 4rem;
+        margin-bottom: 0.3rem;
+    }
+    .sub-head>.sec-sub-letter{
+        font-size: 4rem;
+    }
+    .sub-head>.special,.sub-head>.special>.sec-sub-letter{
+        font-size: 4rem;
+        
+    }
+    .chefs-section{
+        width: 83%;
+    }
+    .chefs-section>.chef-cards{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .chefs-section>.chef-cards>.card{
+        width: 80%;
+        margin: 2.5rem 0rem;
+    }
+    .chefs-section>.chef-cards>.card>picture>.logos-container{
+        width: 4rem;height: 15rem;
+    }
+    .chefs-section>.chef-cards>.card>picture>.logos-container>i{
+        font-size: 1.45rem;
+    }
+    .chefs-section>.chef-cards>.card>.card-content>h3{
+        font-size: 1.45rem;
+    }
+    .chefs-section>.chef-cards>.card>.card-content>span{
+        font-size: 1.06rem;
+        margin-bottom: 1rem;
+    }
+    .chefs-section>.chef-cards>.card>.card-content>p{
+        font-size: 1.133rem;
+        line-height: 1.5rem;
+        margin-bottom: 1.3rem;
+    }
+
+
+}
+   
+
+
+
+/* Extra Small (XS): <576px */
+@media (max-width: 575.98px) {
+    html{
+        font-size: 12px;
+    }
+    .sect-heading{
+        font-size: 1.1rem;
+        margin-top: 2rem;
+    }
+    .sub-head{
+        font-size: 3.8rem;
+        margin-bottom: 0.5rem;
+    }
+    .sub-head>.sec-sub-letter{
+        font-size: 3.8rem;
+    }
+    .sub-head>.special,.sub-head>.special>.sec-sub-letter{
+        font-size: 3.8rem;
+        
+    }
+    .chefs-section{
+        width: 89%;
+    }
+    .chefs-section>.chef-cards{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .chefs-section>.chef-cards>.card{
+        width: 100%;
+        margin: 2.5rem 0rem;
+    }
+    .chefs-section>.chef-cards>.card>picture>.logos-container{
+        width: 4rem;height: 15rem;
+    }
+    .chefs-section>.chef-cards>.card>picture>.logos-container>i{
+        font-size: 1.5rem;
+    }
+    .chefs-section>.chef-cards>.card>.card-content>h3{
+        font-size: 1.45rem;
+    }
+    .chefs-section>.chef-cards>.card>.card-content>span{
+        font-size: 1.06rem;
+        margin-bottom: 1rem;
+    }
+    .chefs-section>.chef-cards>.card>.card-content>p{
+        font-size: 1.133rem;
+        line-height: 1.5rem;
+        margin-bottom: 1.3rem;
+    }
+}
+
+  
+

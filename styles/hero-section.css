@@ -1,0 +1,271 @@
+.hero-section-wrapper{
+    background-color: var(--primary-background-color);
+    overflow: hidden;
+    min-height: 87dvh;
+    display: flex;align-items: center;justify-content: center;
+}
+.hero-section{
+    width: 77%;margin: auto;padding: 3.9% 0;
+    display: flex;justify-content: space-between; align-items: center;
+}
+.hero-section>.hs-text{
+    width: 40%;
+    padding: 1rem;
+    padding-left: 0rem;
+    padding-top: 2rem;
+}
+.hero-section>.hs-text>h2{
+    color: var(--color-secondary);
+    font-family: "Amatic SC", sans-serif;
+    text-transform: uppercase;
+    font-size:3.2rem;
+    line-height: 4rem;
+    font-weight:900;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.15rem;
+}
+.hero-section>.hs-text>h2>span{
+    color: var(--color-secondary);
+    font-family: "Amatic SC", sans-serif;
+    font-weight:900;
+    text-transform: uppercase;
+    font-size:3.7rem;
+}
+.hero-section>.hs-text>p{
+    line-height: 1.6rem;
+    font-size: 1rem;
+    color: var(--color-fourth);
+    margin-bottom: 2rem;
+}
+.hero-section>.hs-text>.btn-group{
+    width: 20rem;
+    display: flex;justify-content: space-between; align-items: center;
+}
+.hero-section>.hs-text>.btn-group>.bat{
+    background-color: var(--color-primary);
+    color: var(--header-background-color);
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 729px;
+    width: 8rem;
+    border-top-left-radius: 0px;
+    height: 100%;
+    transition: 0.3s ease-in;
+}
+.hero-section>.hs-text>.btn-group>.bat:hover{
+    background-color: var(--color-primary-h);
+}
+.hero-section>.hs-text>.btn-group>.wav{
+    display: flex;justify-content: space-evenly; align-items: center;
+    transition: 0.3s ease-in;
+    width: 11.5rem;
+
+}
+.hero-section>.hs-text>.btn-group>.wav:hover{
+    color:var(--color-primary) ;
+}
+.hero-section>.hs-text>.btn-group>.wav>.icon{
+    display: inline-block;
+    font-size: 1.7rem;
+    margin-right: 0.1rem;
+    margin-left: 0.8rem;
+    background-color:transparent;
+    border-radius: 50%;
+    height:3rem;width: 3rem;
+    /*semi circle is done by doing a border top half rhe height of the total height*/
+    border-left: 1.5rem solid var(--color-primary);
+    border-right: none;
+    position: relative;
+
+}
+.hero-section>.hs-text>.btn-group>.wav>.icon>i{
+    color: var(--header-background-color);display: inline-block;
+    background-color:transparent;
+    position: relative;
+    bottom:-0.388rem;right:1.05rem;
+    font-size: 2.15rem;
+    transition: 0.3s ease-in;
+    border-radius: 50%;
+    z-index: 2;
+
+}
+.hero-section>.hs-text>.btn-group>.wav>.icon>.circle{
+    height: 1.2rem;width:1.2rem ;border-radius:50%;background-color: var(--color-default);
+    position: relative; bottom:1.5rem;right: 0.5rem;
+    transition: 0.3s ease-in;
+
+}
+
+
+.hero-section>.hs-text>.btn-group>.wav>span{
+    display: inline-block;    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in;
+}
+
+.hero-section>.hs-text>.btn-group>.wav:hover .icon>.circle{
+    background-color: var(--color-primary);
+}
+.hero-section>.hs-text>.btn-group>.wav:hover span{
+    color: var(--color-primary);
+}
+
+.hero-section>picture{
+    width: 40%;
+    margin-top: 0.01rem;z-index: 0;
+}
+.hero-section>picture>img{
+    width: 100%;
+    object-fit: cover;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.747));
+    transition: 0.5s ease-in;z-index: 0;
+}
+.hero-section>picture:hover img{
+    animation: shake 4s ease-in infinite alternate;
+}
+@keyframes shake {
+    from {
+        transform: rotate(360deg) scale(1);
+    }
+    to {
+        transform: rotate(-360deg) scale(0.9);
+    }
+}
+
+
+/*✅ Bootstrap Breakpoints Reference:
+Breakpoint	Width Range
+xl	≥ 1200px
+lg	≥ 992px and <1200px
+md	≥ 768px and <992px
+sm	≥ 576px and <768px
+xs	< 576p
+*/
+/* LG: Between 992px and 1199.98px (Bootstrap's large screens) */
+
+
+
+
+/* Large (LG): ≥992px and <1200px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    html{
+        font-size: 15px;
+    }
+    
+}
+
+/*Medium (MD): ≥768px and <992px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    html{
+        font-size: 14px;
+    }
+    .hero-section{
+        flex-direction: column-reverse;
+        width: 80%;
+        
+    }
+    .hero-section>picture{
+        width: 70%;
+        margin-bottom: 2rem;
+    }
+    .hero-section>.hs-text{
+        width: 70%;    text-align: center;
+    }
+    .hero-section>.hs-text>h2{
+        font-size:4.5rem;
+        line-height: 6rem;
+        margin-bottom: 2rem;
+        letter-spacing: 0.15rem;
+    }
+    .hero-section>.hs-text>h2>span{
+        font-size:5rem;
+    }
+    .hero-section>.hs-text>p{
+        line-height: 1.8rem;
+        font-size: 1.1rem;
+        margin-bottom: 2.3rem;
+    }
+    .hero-section>.hs-text>.btn-group{
+        margin: auto;
+    }
+    
+    
+}
+  
+/*Small (SM): ≥576px and <768px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    html{
+        font-size: 13px;
+    }
+    .hero-section{
+        width: 83%;
+        flex-direction: column-reverse;        
+    }
+    .hero-section>picture{
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+    .hero-section>.hs-text{
+        width: 80%;    text-align: center;
+    }
+    .hero-section>.hs-text>h2{
+        font-size:4.5rem;
+        line-height: 6rem;
+        margin-bottom: 2rem;
+        letter-spacing: 0.15rem;
+    }
+    .hero-section>.hs-text>h2>span{
+        font-size:5rem;
+    }
+    .hero-section>.hs-text>p{
+        line-height: 1.9rem;
+        font-size: 1.2rem;
+        margin-bottom: 2.3rem;
+    }
+    .hero-section>.hs-text>.btn-group{
+        margin: auto;
+    }
+
+}
+
+
+/* Extra Small (XS): <576px */
+@media (max-width: 575.98px) {
+    html{
+        font-size: 12px;
+    }
+    .hero-section{
+        width: 89%;
+        flex-direction: column-reverse;
+        
+    }
+    .hero-section>picture{
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+    .hero-section>.hs-text{
+        width: 90%;    text-align: center;
+    }
+    .hero-section>.hs-text>h2{
+        font-size:4.5rem;
+        line-height: 6rem;
+        margin-bottom: 2rem;
+        letter-spacing: 0.15rem;
+    }
+    .hero-section>.hs-text>h2>span{
+        font-size:5rem;
+    }
+    .hero-section>.hs-text>p{
+        line-height: 1.9rem;
+        font-size: 1.2rem;
+        margin-bottom: 2.3rem;
+    }
+    .hero-section>.hs-text>.btn-group{
+        margin: auto;
+    }
+    
+}
+
+  
+  

@@ -1,0 +1,237 @@
+.contact-section-wrapper{
+    background-color: var(--secondary-background-color);
+    overflow: hidden;
+}
+.contact-section{
+    width: 77%;margin: auto;padding: 4% 0;
+}
+.contact-section>iframe{
+    width: 100%;
+    height: 20rem;
+}
+.contact-section>.details{
+    width: 101.1%;margin: 1.5rem 0rem;
+    display: flex;justify-content: space-evenly;
+    flex-wrap: wrap;gap: 0.7rem;
+    position: relative;top: 50%;left: 50%;
+    transform: translate(-50%);
+}
+.contact-section>.details>div{
+    width: calc(50% - 1rem);background-color: var(--bg-details);
+    display: flex;align-items: center;
+    padding:1.5rem 1rem;
+}
+.contact-section>.details>div>.icon{
+    background-color: var(--color-primary);
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 50%;
+    display: flex;justify-content: center; align-items: center;
+    transition: 0.3s ease-in;
+}
+.contact-section>.details>div>.icon:hover{
+    background-color:var(--header-background-color) ;
+}
+.contact-section>.details>div>.icon>i{
+    color: var(--header-background-color);
+    font-size: 1.0rem;
+    transition: 0.3s ease-in;
+
+}
+.contact-section>.details>div>.icon:hover i{
+    color:var(--color-primary);
+
+}
+.contact-section>.details>div>.content{
+    margin-left: 0.7rem;
+}
+.contact-section>.details>div>.content>h3{
+    font-family: "Inter", sans-serif;
+    font-size: 1.3rem;font-weight: 700;
+    margin-bottom: 5px; color: var(--h3-details);
+}
+.contact-section>.details>div>.content>p{
+    color: var(--color-default);
+    font-size: 0.92rem;
+}
+.contact-section>.details>div>.content>p>span{
+    font-weight: 700;font-size: 1rem;
+}
+.contact-section>.cu-form{
+    width: 100%;
+    background-color:var(--header-background-color) ;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 0 1.875rem #00000014;
+    display: flex;flex-direction: column;justify-content: space-between;align-items: center;
+    gap: 0.8rem;
+}
+.contact-section>.cu-form>.grouped-input{
+    width: 100%;
+    display: flex;justify-content: space-between;
+    column-gap: 0.8rem;
+}
+.contact-section>.cu-form>.grouped-input>input{
+    width:calc((100% - 0.8rem) / 2);
+    padding: 0.95rem;
+    border: 2px solid var(--border-color-details);
+    outline-color: var(--color-primary);
+    color: #212529;
+}
+.contact-section>.cu-form>input{
+    width: 100%;padding: 0.95rem;
+    border: 2px solid var(--border-color-details);
+    color: #212529;
+    outline-color: var(--color-primary);
+}
+.contact-section>.cu-form>textarea{
+    width: 100%;padding: 0.95rem;
+    height: 7rem;
+    resize:vertical;
+    border: 2px solid var(--border-color-details);
+    color: #212529;
+    outline: none;
+}
+.contact-section>.cu-form>textarea:focus ,.contact-section>.cu-form>input:focus,.contact-section>.cu-form>.grouped-input>input:focus{
+    outline: 2px solid var(--color-primary);
+    border-color: transparent;
+}
+.contact-section>.cu-form>button{
+    padding: 0.8rem 2.2rem;
+    margin-top: 1rem;
+    font-size: 1.0 rem;
+    background-color: var(--color-primary);
+    color: var(--header-background-color);
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    transition: 0.3s ease-in-out;
+}
+.contact-section>.cu-form>button:hover{
+    background-color:var(--color-primary-h);
+    cursor: pointer;
+}
+
+
+/*✅ Bootstrap Breakpoints Reference:
+Breakpoint	Width Range
+xl	≥ 1200px
+lg	≥ 992px and <1200px
+md	≥ 768px and <992px
+sm	≥ 576px and <768px
+xs	< 576p
+*/
+/* LG: Between 992px and 1199.98px (Bootstrap's large screens) */
+
+
+
+
+/* Large (LG): ≥992px and <1200px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    html{
+        font-size: 15px;
+    }
+}
+
+/*Medium (MD): ≥768px and <992px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .contact-section{
+        width: 80%;
+    }
+}
+  
+/*Small (SM): ≥576px and <768px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .contact-section{
+        width: 83%;
+    }
+    .contact-section>iframe{
+        margin-top: 3rem;
+    }
+    .contact-section>.details{
+        flex-direction: column; width: 100%;
+    }
+    .contact-section>.details>div{
+        width: 100%;
+    }
+    .contact-section>.details>div>.icon{
+        width: 3.5rem;height: 3.5rem;
+    }
+    .contact-section>.details>div>.icon>i{
+        font-size: 1.15rem;
+    }
+    .contact-section>.details>div>.content{
+        margin-left: 1rem;
+    }
+    .contact-section>.details>div>.content>h3{
+        font-size: 1.5rem;
+    }
+    .contact-section>.details>div>.content>p{
+        font-size: 1rem;
+    }
+    .contact-section>.details>div>.content>p>span{
+        font-weight: 700;font-size: 1.2rem;
+    }
+    .contact-section>.cu-form>.grouped-input{
+        flex-direction: column; width: 100%;
+        row-gap: 1.1rem;
+    }
+    .contact-section>.cu-form>.grouped-input>input{
+        width: 100%;
+    }
+
+}
+
+
+/* Extra Small (XS): <576px */
+@media (max-width: 575.98px) {
+    .contact-section{
+        width: 89%;
+    }
+    .contact-section>iframe{
+        margin-top: 3rem;
+    }
+    .contact-section>.details{
+        flex-direction: column;width: 100%;
+    }
+    .contact-section>.details>div{
+        width: 100%;
+    }
+    .contact-section>.details>div>.icon{
+        width: 3.5rem;height: 3.5rem;
+    }
+    .contact-section>.details>div>.icon>i{
+        font-size: 1.15rem;
+    }
+    .contact-section>.details>div>.content{
+        margin-left: 1rem;
+    }
+    .contact-section>.details>div>.content>h3{
+        font-size: 1.5rem;
+    }
+    .contact-section>.details>div>.content>p{
+        font-size: 1rem;
+    }
+    .contact-section>.details>div>.content>p>span{
+        font-weight: 700;font-size: 1.2rem;
+    }
+    .contact-section>.cu-form>.grouped-input{
+        flex-direction: column; width: 100%;
+        row-gap: 1.1rem;
+    }
+    .contact-section>.cu-form>.grouped-input>input{
+        width: 100%;
+    }
+
+    
+}
+
+  
+  
+
+
+
+
+
+
+
+

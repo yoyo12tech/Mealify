@@ -1,0 +1,190 @@
+
+.gallery-section-wrapper{
+    background-color: var(--primary-background-color);
+    overflow: hidden;
+}
+
+.gallery-section{
+    width: 77%;margin: auto;padding: 3.9% 0;
+}
+.gallery-section>.gallery-container{
+    display: grid;
+    gap:20px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(12, auto);
+    grid-template-areas: 
+    "meal-1 meal-2 meal-3"
+    "meal-1 meal-2 meal-3"
+    "meal-1 meal-2 meal-3"
+    "meal-4 meal-2 meal-5"
+    "meal-4 meal-2 meal-5"
+    "meal-4 meal-2 meal-5"
+    "meal-4 meal-2 meal-6"
+    "meal-4 meal-7 meal-6"
+    "meal-4 meal-7 meal-6"
+    "   .   meal-7 meal-6"
+    "   .   meal-7   .   "
+    "   .    .   .   ";
+}
+.gallery-section>.gallery-container>div{
+    overflow: hidden;position: relative;
+}
+.gallery-section>.gallery-container>div>img{
+    border: 0.1rem solid white;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery-section>.gallery-container>div:hover img{
+    transform: scale(1.2);
+}
+.m-1{
+    grid-area: meal-1;
+}
+.m-2{
+    grid-area: meal-2;
+}
+.m-3{
+    grid-area: meal-3;
+}
+.m-4{
+    grid-area: meal-4;
+}
+.m-5{
+    grid-area: meal-5;
+}
+.m-6{
+    grid-area: meal-6;
+}
+.m-7{
+    grid-area: meal-7;
+
+}
+
+.gallery-section>.gallery-container>div>.layer{
+    background-color: rgba(0, 0, 0, 0.646);
+    position: absolute;width: 100%;height:100% ;
+    top: 0px;
+    display: flex;flex-direction: column;justify-content: center;align-items: center;
+    padding: 2rem;
+    transform: translateY(110%);
+    transition: 0.3s ease-in-out;
+    transition-delay: 0.3s;
+}
+.gallery-section>.gallery-container>div>.layer>h2{
+    font-family:"Inter", sans-serif;
+    color: white;
+    font-size:1.45rem ;
+    margin-bottom: 0.6rem;
+}
+.gallery-section>.gallery-container>div>.layer>p{
+    color: #bcbbba;text-align: center;
+}
+.gallery-section>.gallery-container>div:hover .layer{
+    transform: translate(0);
+}
+
+
+
+
+/*✅ Bootstrap Breakpoints Reference:
+Breakpoint	Width Range
+xl	≥ 1200px
+lg	≥ 992px and <1200px
+md	≥ 768px and <992px
+sm	≥ 576px and <768px
+xs	< 576p
+*/
+/* LG: Between 992px and 1199.98px (Bootstrap's large screens) */
+
+
+
+
+/* Large (LG): ≥992px and <1200px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    html{
+        font-size: 15px;
+    }
+}
+
+/*Medium (MD): ≥768px and <992px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .gallery-section{
+        width: 80%;
+    }
+    .gallery-section>.gallery-container{
+        display: grid;
+        gap:20px;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(18, auto);
+        grid-template-areas: 
+        "meal-1 meal-2"
+        "meal-1 meal-2"
+        "meal-1 meal-2"
+        "meal-3 meal-2"
+        "meal-3 meal-2"
+        "meal-3 meal-2"
+        "meal-4 meal-2"
+        "meal-4 meal-5"
+        "meal-4 meal-5"
+        "meal-4 meal-5"
+        "meal-4 meal-6"
+        "meal-4 meal-6"
+        "meal-4 meal-6"
+        "meal-7 meal-6"
+        "meal-7 meal-6"
+        "meal-7    .  "
+        "meal-7    .  "
+        "meal-7    .  ";
+    }
+    
+}
+  
+/*Small (SM): ≥576px and <768px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .gallery-section{
+        width: 83%;
+    }
+    .gallery-section>.gallery-container{
+        display:block;margin: auto;margin-top: 2rem;
+        width: 75%;
+    }
+    .gallery-section>.gallery-container>div{
+        margin-bottom: 2rem;
+    }
+    .gallery-section>.gallery-container>div>.layer{
+        padding: 4rem;
+    }
+    .gallery-section>.gallery-container>div>.layer>h2{
+        font-size:1.7rem ;
+        margin-bottom: 0.6rem;
+    }
+
+    
+}
+
+
+/* Extra Small (XS): <576px */
+@media (max-width: 575.98px) {
+    .gallery-section{
+        width: 89%;
+    }
+    .gallery-section>.gallery-container{
+        display:block;margin: auto;margin-top: 2rem;
+        width: 90%;
+    }
+    .gallery-section>.gallery-container>div{
+        margin-bottom: 2rem;
+    }
+    .gallery-section>.gallery-container>div>.layer{
+        padding: 4rem;
+    }
+    .gallery-section>.gallery-container>div>.layer>h2{
+        font-size:1.7rem ;
+        margin-bottom: 0.6rem;
+    }
+}
+
+  
+  
