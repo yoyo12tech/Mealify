@@ -388,6 +388,10 @@ xs	< 576p
 
 /* Extra Small (XS): <576px */
 @media (max-width: 575.98px) {
+    footer{
+        background: linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.199)),url("../assets/pics/textured-metal-background.jpg");
+    }
+
     footer>.container{
         flex-direction: column;
         justify-content: space-evenly;
@@ -419,16 +423,18 @@ xs	< 576p
         font-size: 1.1rem;line-height: 1.5rem;
     }
     footer>.container>.subscription>form{
-        height: 3.2rem;
+        height: 6.2rem;width: 100%;
+        display: flex; flex-direction: column;row-gap: 0.3rem;
     }
     footer>.container>.subscription>form>input{
-        font-size: 0.9rem;
+        font-size: 1rem;width: 100%;height: calc(50% - 0.3rem) ;
+
     }
     footer>.container>.subscription>form>button{
-        font-size: 0.8rem;width: 19%;
+        font-size: 1.1rem;width: 100%; height:calc(50% - 0.3rem);justify-content: center;
     }
     footer>.container>.subscription>form>button>i{
-        font-size: 0.9rem;
+        font-size: 1.3rem;margin-right: 1rem;
     }
     footer>.container>.subscription>.quick-links>h3{
         font-size: 1.2rem;
