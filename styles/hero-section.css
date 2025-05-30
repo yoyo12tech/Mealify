@@ -38,17 +38,17 @@
     margin-bottom: 2rem;
 }
 .hero-section>.hs-text>.btn-group{
-    width: 20rem;
+    width: 320px;
     display: flex;justify-content: space-between; align-items: center;
 }
 .hero-section>.hs-text>.btn-group>.bat{
     background-color: var(--color-primary);
     color: var(--header-background-color);
-    font-size: 0.9rem;
-    padding: 10px 15px;
+    font-size: 14.4px;
+    padding: 0.625rem 0.9375rem;
     text-align: center;
     border-radius: 729px;
-    width: 8rem;
+    width: 128px;
     border-top-left-radius: 0px;
     height: 100%;
     transition: 0.3s ease-in;
@@ -59,7 +59,7 @@
 .hero-section>.hs-text>.btn-group>.wav{
     display: flex;justify-content: space-evenly; align-items: center;
     transition: 0.3s ease-in;
-    width: 11.5rem;
+    width: 184px;
 
 }
 .hero-section>.hs-text>.btn-group>.wav:hover{
@@ -67,14 +67,14 @@
 }
 .hero-section>.hs-text>.btn-group>.wav>.icon{
     display: inline-block;
-    font-size: 1.7rem;
-    margin-right: 0.1rem;
-    margin-left: 0.8rem;
+    font-size: 27.2px;
+    margin-right: 1.6px;
+    margin-left: 12.8px;
     background-color:transparent;
     border-radius: 50%;
-    height:3rem;width: 3rem;
+    height:48px;width: 48px;
     /*semi circle is done by doing a border top half rhe height of the total height*/
-    border-left: 1.5rem solid var(--color-primary);
+    border-left: 24px solid var(--color-primary);
     border-right: none;
     position: relative;
 
@@ -83,23 +83,23 @@
     color: var(--header-background-color);display: inline-block;
     background-color:transparent;
     position: relative;
-    bottom:-0.388rem;right:1.05rem;
-    font-size: 2.15rem;
+    bottom:-6.208px;right:16.8px;
+    font-size: 34.4px;
     transition: 0.3s ease-in;
     border-radius: 50%;
     z-index: 2;
 
 }
 .hero-section>.hs-text>.btn-group>.wav>.icon>.circle{
-    height: 1.2rem;width:1.2rem ;border-radius:50%;background-color: var(--color-default);
-    position: relative; bottom:1.5rem;right: 0.5rem;
+    height: 19.2px;width:19.2px ;border-radius:50%;background-color: var(--color-default);
+    position: relative; bottom:24px;right: 8px;
     transition: 0.3s ease-in;
 
 }
 
 
 .hero-section>.hs-text>.btn-group>.wav>span{
-    display: inline-block;    font-size: 1rem;
+    display: inline-block;    font-size: 16px;
     font-weight: 600;
     transition: 0.3s ease-in;
 }

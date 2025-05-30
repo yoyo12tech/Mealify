@@ -41,14 +41,17 @@ header>nav>a{
     transition: 0.5s;
     cursor: pointer;
 }
-header:not(header:has(:target)) a[href="#home"] /*It targets the Home link (a[href="#home"]) only when there is no :target element on the page has(condition) is useful as it reaches parent's decendants not only children make it so powerful*/
+body:not(:has(:target)) a[href="home"]
 {
     color: var(--color-default);
 }
 header>nav>a:hover{
     color: var(--color-default);
 }
-header>nav>a:target{ /*target element when its id matches url fragment #*/
+body:has(#home:target) a[href="#home"],
+body:has(#chefs:target) a[href="#chefs"],
+body:has(#gallery:target) a[href="#gallery"],
+body:has(#contact:target) a[href="#contact"] {
     color: var(--color-default);
 }
 header>nav>a:after{
@@ -65,13 +68,16 @@ header>nav>a:hover:after{  /*: On hover, only the width of the :after element ch
     width: 100%;
 }
 
-header>nav>a:target:after{
+body:has(#home:target) a[href="#home"]:after,
+body:has(#chefs:target) a[href="#chefs"]:after,
+body:has(#gallery:target) a[href="#gallery"]:after,
+body:has(#contact:target) a[href="#contact"]:after{
     width: 100%;
 }
-header:not(header:has(:target)) a[href="#home"]:after
+/* header:not(header:has(:target)) a[href="#home"]:after
 {
     width: 100%;
-}
+} */
 /*ICON PART*/
 header>.icon{
     width: 5%;
