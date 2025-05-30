@@ -41,10 +41,10 @@ header>nav>a{
     transition: 0.5s;
     cursor: pointer;
 }
-body:not(:has(:target)) a[href="home"]
-{
-    color: var(--color-default);
+body:not(:has(#chefs:target)):not(:has(#gallery:target)):not(:has(#contact:target)) a[href="#home"] {
+  color: var(--color-default);
 }
+
 header>nav>a:hover{
     color: var(--color-default);
 }
@@ -74,10 +74,9 @@ body:has(#gallery:target) a[href="#gallery"]:after,
 body:has(#contact:target) a[href="#contact"]:after{
     width: 100%;
 }
-/* header:not(header:has(:target)) a[href="#home"]:after
-{
+body:not(:has(#chefs:target)):not(:has(#gallery:target)):not(:has(#contact:target)) a[href="#home"]:after {
     width: 100%;
-} */
+} 
 /*ICON PART*/
 header>.icon{
     width: 5%;
