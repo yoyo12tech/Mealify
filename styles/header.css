@@ -337,10 +337,10 @@ xs	< 576p
 @media (max-width: 575.98px) {
     html{
         font-size: 12px;
+        scroll-padding-top: 82px !important;
     }
     header{
-        padding: 1.3rem 2rem;
-
+        padding: 40.8px 44px;
     }
     header>nav{
         display: none;
